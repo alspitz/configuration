@@ -1,0 +1,8 @@
+function cd {
+  builtin cd "$@"
+  pwd > ~/.last_dir
+}
+
+if [ -f ~/.last_dir ]
+  then cd "`cat ~/.last_dir`"
+fi

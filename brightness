@@ -1,0 +1,9 @@
+#!/bin/sh
+
+BRIGHTNESS_FILE="/sys/class/backlight/intel_backlight/brightness"
+
+if [ $# -gt 0 ]; then
+  su -c "echo $1 > $BRIGHTNESS_FILE";
+else
+  cat $BRIGHTNESS_FILE;
+fi

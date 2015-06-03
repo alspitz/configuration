@@ -1,0 +1,16 @@
+#!/bin/bash
+# Moves the most recently downloaded file to the current directory.
+# Does not move the file if -v is supplied
+latest="/home/alex/Downloads/`ls -c ~/Downloads | head -n 1`"
+echo $latest
+
+if [ "$1" == "-v" ]
+  then exit
+fi
+
+move_name=.
+if [ ! -z "$1" ]
+  then move_name="$move_name/$1"
+fi
+
+mv "$latest" $move_name
