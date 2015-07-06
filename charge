@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Script to display laptop battery charge level
+# (c) Alex Spitzer 2013
+# Inspiration from Basically Tech
+
+LOC=/sys/class/power_supply/BAT0
+
+FULL=`grep [0-9] $LOC/energy_full`
+NOW=`grep [0-9] $LOC/energy_now`
+
+CAP="$(( $NOW * 100 / $FULL ))"
+
+GREEN='\033[01;32m'
+YELLOW='\033[01;33m'
+RED='\033[01;31m'
+
+COLOR="$RED"
+
+if [ "$CAP" -gt "15" ]
+then
+	COLOR="$YELLOW"
+fi
+
+if [ "$CAP" -gt "30" ]
+then
+	COLOR="$GREEN"
+fi
+
+echo -e "${COLOR}${CAP}\033[0m"
+

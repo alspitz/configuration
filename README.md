@@ -6,10 +6,12 @@ in your previously cd'ed directory.
 
 icewm/ contains my preferences and key bindings for the icewm window manager.
 
+brightness allows you to manually adjust your backlight brightness.
+
+charge prints out the percentage of your laptop battery life remaining.
+
 killwindow allows you to instantly kill any window by clicking on it.
 
 mvlatest moves the last item to be downloaded to your current directory.
-
-brightness allows you to manually adjust your backlight brightness.
 
 Your mileage will definitely vary!
