@@ -6,6 +6,9 @@ in your previously cd'ed directory.
 
 icewm/ contains my preferences and key bindings for the icewm window manager.
 
+add\_monitor lets you easily add a display to the right of your desktop by
+specifying the xrandr output name and resolution.
+
 brightness allows you to manually adjust your backlight brightness.
 
 charge prints out the percentage of your laptop battery life remaining.

@@ -1,0 +1,20 @@
+#!/bin/sh
+output=HDMI1
+res=1680x1050
+
+if [ ! -z $1 ]; then
+  output=$1
+fi
+
+if [ "$output" = "d" ]; then
+  echo "Removing output $2"
+  xrandr --output $2 --off
+  exit 0
+fi
+
+if [ ! -z $2 ]; then
+  res=$2
+fi
+
+echo "Adding output ${output} to the right with resolution ${res}"
+xrandr --output ${output} --mode ${res} --output LVDS1 --mode 1366x768 --left-of ${output}
