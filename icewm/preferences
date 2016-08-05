@@ -283,6 +283,8 @@ TaskBarShowWindowListMenu=0 # 0/1
 #  Show ACPI temperature in CPU status tool tip
 # CPUStatusShowAcpiTemp=1 # 0/1
 
+CPUStatusShowAcpiTempInGraph=1
+
 #  Show CPU frequency in CPU status tool tip
 # CPUStatusShowCpuFreq=1 # 0/1
 
@@ -557,7 +559,7 @@ RebootCommand="sudo reboot"
 NetworkStatusDevice="eth0 wlan0"
 
 #  Clock Time format (strftime format string)
-TimeFormat="%D %H:%M:%S"
+TimeFormat="%D %H:%M"
 
 #  Alternate Clock Time format (e.g. for blinking effects)
 # TimeFormatAlt=""
@@ -1293,7 +1295,7 @@ DesktopBackgroundScaled=0 # 0/1
 DesktopBackgroundColor="white"
 
 #  Desktop background image
-DesktopBackgroundImage="/home/alex/images/cuauv.jpg"
+DesktopBackgroundImage="/home/alex/images/dragon.jpg"
 
 #  Color to announce for semi-transparent windows
 # DesktopTransparencyColor=""
