@@ -1,6 +1,7 @@
 #!/bin/sh
 output=HDMI1
 res=1680x1050
+laptop=eDP1
 
 if [ ! -z $1 ]; then
   output=$1
@@ -17,4 +18,4 @@ if [ ! -z $2 ]; then
 fi
 
 echo "Adding output ${output} to the right with resolution ${res}"
-xrandr --output ${output} --mode ${res} --output LVDS1 --mode 1366x768 --left-of ${output}
+xrandr --output ${output} --mode ${res} --output ${laptop} --mode 1920x1080 --left-of ${output}
