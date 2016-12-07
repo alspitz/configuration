@@ -13,4 +13,4 @@ if [ ! -z "$1" ]
   then move_name="$move_name/$1"
 fi
 
-mv "$latest" $move_name
+mv "$latest" "$move_name"
