@@ -15,13 +15,17 @@ map <F4> :e %:p:s,.h$,X,:s,.cpp$,.h,:s,X$,.cpp,<CR>
 set undodir=/home/alex/.vim/undo
 set undofile
 
-set relativenumber
+" set relativenumber
+
+colorscheme desert
 
 " Detect glsl files.
 autocmd! BufNewFile,BufRead *.glsl,*.geom,*.vert,*.frag,*.gsh,*.vsh,*.fsh,*.vs,*.fs set filetype=glsl
 
-au BufNewFile,BufRead *.cpp,*.h set syntax=cpp11
+au BufNewFile,BufRead *.cpp,*.h set syntax=cpp
 au BufNewFile,BufRead *.ino,*.pde set filetype=arduino
+" For ROS Launch files.
+au BufNewFile,BufRead *.launch set filetype=xml
 
 " For texlive.
 filetype plugin indent on
