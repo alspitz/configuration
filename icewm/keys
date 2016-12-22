@@ -10,37 +10,24 @@
 # XF86. Valid modifiers are Alt, Ctrl, Shift, Meta, Super and Hyper.
 #
 key "Alt+Ctrl+t"		xterm -geometry 84x22
+key "Alt+Ctrl+u"		xterm -geometry 84x22 -e "schroot -c trusty"
 key "Alt+Ctrl+e"		xterm -e "ssh auv"
-key "Alt+Ctrl+f"		fte
-key "Alt+Ctrl+g"		gimp
-#key "Alt+Ctrl+m"		/usr/bin/chromium/chrome 
-key "Alt+Ctrl+m"		/home/alex/chrome/chrome
-key "Alt+Ctrl+s"        sudo standby
-key "Alt+Ctrl+k"        kill_window
-#key "Alt+Ctrl+n"        sudo /home/alex/connect
-key "Alt+Ctrl+n"        sudo /home/alex/restart_dhcp.sh
-key "Alt+Ctrl+p"        xterm "python"
-key "Alt+Ctrl+h"        auv-shm-editor
-key "Alt+Ctrl+q"        scrot
-
-key "Ctrl+F5"    sudo brightness $((`brightness`-200))
-key "Ctrl+F6"    sudo brightness $((`brightness`+200))
-
-key "Alt+Ctrl+KP_Divide"	aumix -v -5		# lower volume
-key "Alt+Ctrl+KP_Multiply"	aumix -v +5		# raise volume
+key "Alt+Ctrl+m"		google-chrome-stable
+key "Alt+Ctrl+k"    kill_window
+key "Alt+Ctrl+g"    xterm "gnuplot"
+key "Alt+Ctrl+j"    xterm "julia"
+key "Alt+Ctrl+o"    xterm "octave-cli"
+key "Alt+Ctrl+p"    xterm "python"
+key "Alt+Ctrl+q"    scrot
 
 # "Multimedia key" bindings for XFree86. Gather the keycodes of your
 # advanced function keys by watching the output of the xev command whilest
 # pressing those keys and map those symbols by using xmodmap.
 
-key "XF86Sleep"		killall icewm
 key "XF86AudioLowerVolume"	amixer set Master playback 3dB-
 key "XF86AudioRaiseVolume"	amixer set Master playback 3dB+
+key "XF86MonBrightnessDown"	xbacklight -dec 10
+key "XF86MonBrightnessUp"	xbacklight -inc 10
 key "XF86AudioMute"		amixer set Master playback 0%
-key "XF86AudioPlay"		cdplay play 1
-key "XF86AudioStop"		cdplay stop
-key "XF86HomePage"		netscape -noraise -remote openHomepage
-key "XF86Mail"			netscape -noraise -remote openURL(mailto:,new-window) 
-key "XF86Search"		netscape -noraise -remote openURL(http://www.google.com/)
-key "XF86Eject"			eject
-key "XF86PowerOff"      sudo halt
+key "XF86Search"		firefox www.google.com
+#key "XF86PowerOff"      sudo halt

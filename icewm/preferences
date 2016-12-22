@@ -283,7 +283,7 @@ TaskBarShowWindowListMenu=0 # 0/1
 #  Show ACPI temperature in CPU status tool tip
 # CPUStatusShowAcpiTemp=1 # 0/1
 
-CPUStatusShowAcpiTempInGraph=1
+CPUStatusShowAcpiTempInGraph=0
 
 #  Show CPU frequency in CPU status tool tip
 # CPUStatusShowCpuFreq=1 # 0/1
@@ -535,10 +535,10 @@ BatteryPollingPeriod=2 # [2-3600]
 # LogoutCancelCommand=""
 
 #  Command to shutdown the system
-ShutdownCommand="sudo halt"
+ShutdownCommand="shutdown -t now"
 
 #  Command to reboot the system
-RebootCommand="sudo reboot"
+RebootCommand="reboot"
 
 #  Command to run on CPU status
 # CPUStatusCommand="xterm -name top -title Process\ Status -e top"
@@ -556,7 +556,7 @@ RebootCommand="sudo reboot"
 # AddressBarCommand=""
 
 #  Network device to show status for
-NetworkStatusDevice="eth0 wlan0"
+NetworkStatusDevice="enp0s31f6 wlp4s0"
 
 #  Clock Time format (strftime format string)
 TimeFormat="%D %H:%M"
@@ -1295,7 +1295,7 @@ DesktopBackgroundScaled=0 # 0/1
 DesktopBackgroundColor="white"
 
 #  Desktop background image
-DesktopBackgroundImage="/home/alex/images/dragon.jpg"
+DesktopBackgroundImage="/home/alex/Downloads/barn.jpg"
 
 #  Color to announce for semi-transparent windows
 # DesktopTransparencyColor=""
