@@ -12,7 +12,7 @@ imap <tab> <esc>
 map <F4> :e %:p:s,.h$,X,:s,.cpp$,.h,:s,X$,.cpp,<CR>
 
 " Persistent undos.
-set undodir=/home/alex/.vim/undo
+set undodir=~/.vim/undo
 set undofile
 
 " set relativenumber
@@ -26,6 +26,7 @@ au BufNewFile,BufRead *.cpp,*.h set syntax=cpp
 au BufNewFile,BufRead *.ino,*.pde set filetype=arduino
 " For ROS Launch files.
 au BufNewFile,BufRead *.launch set filetype=xml
+au BufNewFile,BufRead *.rosinstall set filetype=yaml
 
 " For texlive.
 filetype plugin indent on
@@ -35,11 +36,12 @@ let g:tex_flavor = "latex"
 " This lets us keep our shiftwidth of 2.
 let g:python_recommended_style = 0
 
-highlight ExtraWhitespace ctermbg=red
+highlight ExtraWhitespace ctermbg=Red
 match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+autocmd BufWinEnter * hi ExtraWhitespace ctermbg=Red | match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * hi ExtraWhitespace ctermbg=Red | match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * hi ExtraWhitespace ctermbg=Red | match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 function! Pretty()
@@ -50,3 +52,9 @@ function! Pretty()
   execute '%s/\([^ =]\)\([+*-]\|==\|=\)/\1 \2/g'
   execute '%s/\([+*-]\|==\|=\)\([^ =]\)/\1 \2/g'
 endfunction
+
+let g:BASH_Ctrl_j = "off"
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
