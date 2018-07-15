@@ -541,13 +541,13 @@ ShutdownCommand="shutdown -t now"
 RebootCommand="reboot"
 
 #  Command to run on CPU status
-# CPUStatusCommand="xterm -name top -title Process\ Status -e top"
+CPUStatusCommand="xterm -name top -title Process\ Status -e htop"
 
 #  WM_CLASS to allow runonce for CPUStatusCommand
 # CPUStatusClassHint="top.XTerm"
 
 #  Command to run on Net status
-# NetStatusCommand="xterm -name netstat -title 'Network Status' -e netstat -c"
+NetStatusCommand="wireshark"
 
 #  WM_CLASS to allow runonce for NetStatusCommand
 # NetStatusClassHint="netstat.XTerm"
@@ -556,7 +556,7 @@ RebootCommand="reboot"
 # AddressBarCommand=""
 
 #  Network device to show status for
-NetworkStatusDevice="enp0s31f6 wlp4s0"
+NetworkStatusDevice="enp0s31f6 wlp4s0 ra0"
 
 #  Clock Time format (strftime format string)
 TimeFormat="%D %H:%M"
@@ -1295,7 +1295,7 @@ DesktopBackgroundScaled=0 # 0/1
 DesktopBackgroundColor="white"
 
 #  Desktop background image
-DesktopBackgroundImage="/home/alex/Downloads/barn.jpg"
+DesktopBackgroundImage="/home/alex/images/spacex_sized.jpg"
 
 #  Color to announce for semi-transparent windows
 # DesktopTransparencyColor=""
