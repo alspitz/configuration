@@ -1,0 +1,1 @@
+ACTION=="bind", SUBSYSTEM=="hid", RUN+="/bin/env HOME=/home/alex /bin/xset -display :0 r rate 190 90"
