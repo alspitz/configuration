@@ -12,7 +12,8 @@
 key "Alt+Ctrl+t"		xterm -geometry 84x22
 key "Alt+Ctrl+u"		xterm -geometry 84x22 -e "schroot -c xenial"
 key "Alt+Ctrl+e"		xterm -e "RIS_DIR=/home/alex/rasl source /home/alex/rasl/utility_scripts/env.sh && ssh_ris"
-key "Alt+Ctrl+m"		firefox
+key "Alt+Ctrl+c"		autorandr -c
+key "Alt+Ctrl+m"		google-chrome-stable
 key "Alt+Ctrl+k"    kill_window
 key "Alt+Ctrl+g"    xterm "gnuplot"
 key "Alt+Ctrl+j"    xterm "julia"
@@ -20,6 +21,7 @@ key "Alt+Ctrl+o"    xterm "octave-cli"
 key "Alt+Ctrl+p"    xterm "python"
 key "Alt+Ctrl+q"    scrot
 key "Alt+Ctrl+l"    xscreensaver-command -lock
+key "Alt+Ctrl+a"    xterm -geometry 160x25 -e "yay; bash -l"
 
 # "Multimedia key" bindings for XFree86. Gather the keycodes of your
 # advanced function keys by watching the output of the xev command whilest
