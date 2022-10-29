@@ -18,6 +18,8 @@ map <F4> :e %:p:s,.h$,X,:s,.cpp$,.h,:s,X$,.cpp,<CR>
 set undodir=~/.vim/undo
 set undofile
 
+set clipboard=unnamedplus
+
 " set relativenumber
 
 colorscheme desert
@@ -30,6 +32,8 @@ au BufNewFile,BufRead *.ino,*.pde set filetype=arduino
 " For ROS Launch files.
 au BufNewFile,BufRead *.launch set filetype=xml
 au BufNewFile,BufRead *.rosinstall set filetype=yaml
+" For .make files
+au BufNewFile,BufRead *.make set filetype=make
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -41,8 +45,9 @@ let g:netrw_winsize = 25
 filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
-let g:Tex_GotoError=0
-let g:Tex_MultipleCompileFormats = "dvi,pdf"
+let g:Tex_GotoError = 0
+let g:Tex_MultipleCompileFormats = "pdf"
+let g:Imap_UsePlaceHolders = 0
 
 " This lets us keep our shiftwidth of 2.
 let g:python_recommended_style = 0
@@ -69,7 +74,7 @@ let g:BASH_Ctrl_j = "off"
 " Vim's imaps(?) comes with a jump forward binding for Ctrl-J; move it somewhere else.
 nmap <unique> <c-n> <Plug>IMAP_JumpForward
 " Vim's netrw comes with a refresh binding for Ctrl-L; move it somewhere else.
-nmap <unique> <c-r> <Plug>NetrwRefresh
+nmap <unique> <c-b> <Plug>NetrwRefresh
 
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
