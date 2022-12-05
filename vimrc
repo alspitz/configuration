@@ -81,6 +81,8 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
+map <Esc>h <A-h>
+map <Esc>l <A-l>
 nnoremap <A-h> :tabprevious<CR>
 nnoremap <A-l> :tabnext<CR>
 nnoremap è :tabprevious<CR>
