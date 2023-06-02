@@ -10,4 +10,5 @@ fi
 
 mkdir -p "${HOME}/.vim/undo"
 
-cp mvlatest "${HOME}/.local/bin"
+mkdir -p "${HOME}/.local/bin"
+cp mvlatest "${HOME}/.local/bin/"
