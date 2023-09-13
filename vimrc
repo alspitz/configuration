@@ -34,6 +34,8 @@ au BufNewFile,BufRead *.launch set filetype=xml
 au BufNewFile,BufRead *.rosinstall set filetype=yaml
 " For .make files
 au BufNewFile,BufRead *.make set filetype=make
+" For svelte files
+au BufNewFile,BufRead *.svelte set filetype=html
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -81,12 +83,12 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
-map <Esc>h <A-h>
-map <Esc>l <A-l>
+"map <Esc>h <A-h>
+"map <Esc>l <A-l>
 nnoremap <A-h> :tabprevious<CR>
 nnoremap <A-l> :tabnext<CR>
-nnoremap è :tabprevious<CR>
-nnoremap ì :tabnext<CR>
+"nnoremap è :tabprevious<CR>
+"nnoremap ì :tabnext<CR>
 
 nnoremap <C-o> <C-w><
 nnoremap <C-p> <C-w>>
